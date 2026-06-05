@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badminton Rules | Badmintalk</title>
+
+    <link rel="stylesheet" href="/ext-styling/stylesheets.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <h1 class="logo">The World Of Badminton</h1>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="rules.html" class="active">Rules</a></li>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="tournaments.html">Tournaments</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content">
+        <h2>Rules of Badminton</h2>
+        <p>Learn the fundamentals of the game</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro section">
+        <div class="intro-text">
+          <h2>Understanding the Rules</h2>
+          <p class="section-subtitle"></p>
+
+          <p>
+            Badminton is a fast-paced sport that combines speed, precision, and
+            strategy. While the basic objective is simple—hit the shuttlecock
+            over the net and into your opponent's court—the official rules help
+            keep matches fair and competitive.
+          </p>
+
+          <p>
+            Learning the scoring system, serving rules, and common faults is the
+            first step toward becoming a better player.
+          </p>
+        </div>
+
+        <div class="intro-image">
+          <img
+            src="https://www.pescholar.com/wp-content/uploads/2015/03/The-Badminton-Court.png"
+            alt="Badminton court" />
+        </div>
+      </section>
+      <section class="scoring-system section">
+        <h2>Key Rules Every Player Should Know</h2>
+        <p class="section-subtitle">
+          Hover over each card to learn how badminton matches are scored and
+          officiated.
+        </p>
+
+        <div class="score-grid">
+          <!-- 21 Points -->
+          <div class="score-card">
+            <div class="score-card-inner">
+              <div class="score-card-front">
+                <h3>🏆 21 Points</h3>
+                <p>Games are played to 21 points.</p>
+              </div>
+
+              <div class="score-card-back">
+                <h3>21 Point System</h3>
+                <p>
+                  Every rally awards a point. The first player or team to reach
+                  21 points wins the game, provided they are ahead by at least
+                  two points. Most matches are played as best of three games.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Win by 2 -->
+          <div class="score-card">
+            <div class="score-card-inner">
+              <div class="score-card-front">
+                <h3>⚖️ Win by 2</h3>
+                <p>You must win by a two-point margin.</p>
+              </div>
+
+              <div class="score-card-back">
+                <h3>Why Win by 2?</h3>
+                <p>
+                  If the score becomes 20-20, play continues until one player
+                  leads by two points. For example, 22-20 or 25-23. This
+                  prevents games from ending on a single lucky point.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Serving Rules -->
+          <div class="score-card">
+            <div class="score-card-inner">
+              <div class="score-card-front">
+                <h3>🎯 Serving Rules</h3>
+                <p>Every rally begins with a serve.</p>
+              </div>
+
+              <div class="score-card-back">
+                <h3>How to Serve</h3>
+                <p>
+                  The shuttle must be struck below the server's waist and travel
+                  diagonally into the opponent's service box. If the serve lands
+                  outside the correct area, the opponent wins the rally and
+                  scores a point.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Common Faults -->
+          <div class="score-card">
+            <div class="score-card-inner">
+              <div class="score-card-front">
+                <h3>🚫 Common Faults</h3>
+                <p>Faults immediately give away the rally.</p>
+              </div>
+
+              <div class="score-card-back">
+                <h3>Examples of Faults</h3>
+                <p>
+                  Hitting the shuttle out of bounds, touching the net with your
+                  racket or body, serving incorrectly, striking the shuttle
+                  twice, or allowing it to hit the ground on your side all
+                  result in losing the rally.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="court-layout section">
+        <h2>Understanding the Court</h2>
+
+        <div class="court-intro">
+          <div class="court-text">
+            <p>
+              A badminton court contains different zones used for singles and
+              doubles matches. Understanding these areas helps players serve
+              correctly and position themselves effectively.
+            </p>
+
+            <ul class="court-info">
+              <li>
+                <strong>Singles Court:</strong>
+                Uses the inner side lines.
+              </li>
+
+              <li>
+                <strong>Doubles Court:</strong>
+                Uses the full court width.
+              </li>
+
+              <li>
+                <strong>Service Areas:</strong>
+                Determines where serves must land.
+              </li>
+            </ul>
+          </div>
+
+          <div class="court-image">
+            <img
+              src="https://www.pescholar.com/wp-content/uploads/2015/03/The-Badminton-Court.png"
+              alt="Badminton court diagram" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <h3>The World Of Badminton</h3>
+        <p>Learn. Play. Improve.</p>
+        <p class="footer-small">© 2026 Badmintalk</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑ Top</button>
+
+    <script>
+      const btn = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          btn.classList.add("show");
+        } else {
+          btn.classList.remove("show");
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>
