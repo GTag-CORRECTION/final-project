@@ -798,45 +798,61 @@ nav a.active {
 ========================================== */
 
 .footer {
-  background: linear-gradient(
-    135deg,
-    var(--primary-dark),
-    var(--primary-color)
-  );
-
+  background: #111;
   color: white;
-
-  padding: 80px 20px 40px;
-
-  margin-top: 100px;
-
+  padding: 2rem 1rem;
   text-align: center;
-
-  border-top: 4px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer-content h3 {
+  margin-bottom: 1rem;
   font-size: 1.8rem;
-
-  margin-bottom: 10px;
 }
 
-.footer-content p {
-  margin: 10px 0;
-
-  opacity: 0.9;
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
-.footer-small {
-  margin-top: 20px;
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  position: relative;
+}
 
-  font-size: 0.85rem;
+.footer-links a:hover {
+  color: #00c853;
+}
 
-  opacity: 0.7;
+/* Animated underline */
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #00c853;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 /* ==========================================
-   FINAL MOBILE POLISH
+  FINAL MOBILE POLISH
 ========================================== */
 
 @media (max-width: 768px) {
