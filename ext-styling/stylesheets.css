@@ -1480,3 +1480,37 @@ nav a.active {
 #tips {
   text-align: center;
 }
+
+.construction-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.construction-page h1 {
+  font-size: 3rem;
+}
+
+.construction-page p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.back-btn {
+  background: #00c853;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+}
