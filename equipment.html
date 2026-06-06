@@ -21,7 +21,6 @@
           <li><a href="equipment.html" class="active">Equipment</a></li>
           <li><a href="players.html">Players</a></li>
           <li><a href="tournaments.html">Tournaments</a></li>
-          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -178,8 +177,8 @@
         </div>
       </section>
 
-      <section class="equipment-tips">
-        <h2>Tips for Choosing Equipment</h2>
+      <section id="tips" class="rules section">
+        <h2 class="section-title">Tips for Choosing Equipment</h2>
         <ul>
           <li>Consider your skill level when selecting a racket.</li>
           <li>Invest in good quality shoes for better performance.</li>
@@ -187,18 +186,50 @@
         </ul>
       </section>
 
-      <section class="equipment-gallery">
+      <section class="equipment-gallery section">
         <h2>Equipment Gallery</h2>
+        <p class="gallery-intro">
+          Explore some of the essential equipment used in badminton.
+        </p>
+
         <div class="gallery-grid">
-          <img
-            src="https://m.media-amazon.com/images/I/718U7rysa9L.jpg"
-            alt="Badminton racket" />
-          <img
-            src="https://m.media-amazon.com/images/I/718U7rysa9L.jpg"
-            alt="Badminton shuttlecock" />
-          <img
-            src="https://m.media-amazon.com/images/I/718U7rysa9L.jpg"
-            alt="Badminton shoes" />
+          <figure class="gallery-card">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/023/615/711/large_2x/badminton-rackets-and-white-cream-badminton-shuttlecocks-after-playing-or-after-games-on-green-floor-in-indoor-badminton-court-soft-focus-concept-for-badminton-lovers-around-the-world-free-photo.jpg"
+              alt="Badminton racket" />
+            <figcaption>
+              <h3>Badminton Racket</h3>
+              <p>
+                Lightweight and designed for speed, control, and powerful shots.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img
+              src="https://media.newitts.com/cdn/images/products/new-design/800x800/it102393a_2.jpg"
+              alt="Badminton shuttlecock" />
+            <figcaption>
+              <h3>Shuttlecock</h3>
+              <p>
+                The projectile used during play. Available in feather and
+                synthetic versions.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img
+              src="https://koala.sh/api/image/v2-t6kii-ye2nf.jpg?width=1216&height=832&dream"
+              alt="Badminton shoes" />
+            <figcaption>
+              <h3>Badminton Shoes</h3>
+              <p>
+                Provides grip, support, and stability during quick movements on
+                the court.
+              </p>
+            </figcaption>
+          </figure>
         </div>
       </section>
     </main>
@@ -231,6 +262,31 @@
           top: 0,
           behavior: "smooth",
         });
+      });
+    </script>
+
+    <!--Add JavaScript for navbar shrink on scroll -->
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("shrink");
+        } else {
+          navbar.classList.remove("shrink");
+        }
+      });
+    </script>
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("shrink");
+        } else {
+          navbar.classList.remove("shrink");
+        }
       });
     </script>
   </body>

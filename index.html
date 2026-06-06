@@ -21,7 +21,6 @@
         <li><a href="equipment.html">Equipment</a></li>
         <li><a href="players.html">Players</a></li>
         <li><a href="tournaments.html">Tournaments</a></li>
-        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -224,8 +223,6 @@
           <a href="tournaments.html" class="hub-item bottom-right">
             Tournaments
           </a>
-
-          <a href="contact.html" class="hub-contact"> Contact </a>
         </div>
       </section>
     </main>
@@ -252,7 +249,6 @@
           <h4>More</h4>
 
           <a href="tournaments.html">Tournaments</a>
-          <a href="contact.html">Contact</a>
         </div>
       </div>
 
@@ -279,6 +275,31 @@
           top: 0,
           behavior: "smooth",
         });
+      });
+    </script>
+
+    <!--Add JavaScript for navbar shrink on scroll -->
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("shrink");
+        } else {
+          navbar.classList.remove("shrink");
+        }
+      });
+    </script>
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("shrink");
+        } else {
+          navbar.classList.remove("shrink");
+        }
       });
     </script>
   </body>

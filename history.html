@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>History of Badminton | Badmintalk</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://chatgpt.com/backend-api/estuary/content?id=file_00000000141071fdbf614039e84083aa&ts=494643&p=fs&cid=1&sig=2dbd0b2be1ea0456b48d9bc4abf7a79adc24c28ef96f1363bd3768a275d10f10&v=0" />
+    />
 
     <link rel="stylesheet" href="ext-styling/stylesheets.css" />
   </head>
@@ -21,7 +26,6 @@
           <li><a href="equipment.html">Equipment</a></li>
           <li><a href="players.html">Players</a></li>
           <li><a href="tournaments.html">Tournaments</a></li>
-          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="hero-content">
@@ -173,5 +177,51 @@
         <p class="footer-small">© 2026 Badmintalk</p>
       </div>
     </footer>
+
+    <button id="backToTop" class="back-to-top">↑ Top</button>
+
+    <script>
+      const btn = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          btn.classList.add("show");
+        } else {
+          btn.classList.remove("show");
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+
+    <!--Add JavaScript for navbar shrink on scroll -->
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("shrink");
+        } else {
+          navbar.classList.remove("shrink");
+        }
+      });
+    </script>
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("shrink");
+        } else {
+          navbar.classList.remove("shrink");
+        }
+      });
+    </script>
   </body>
 </html>

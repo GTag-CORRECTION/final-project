@@ -19,7 +19,6 @@
           <li><a href="equipment.html">Equipment</a></li>
           <li><a href="players.html">Players</a></li>
           <li><a href="tournaments.html">Tournaments</a></li>
-          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -208,5 +207,31 @@
         });
       });
     </script>
+
+    <!--Add JavaScript for navbar shrink on scroll -->
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("shrink");
+        } else {
+          navbar.classList.remove("shrink");
+        }
+      });
+    </script>
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("shrink");
+        } else {
+          navbar.classList.remove("shrink");
+        }
+      });
+    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
