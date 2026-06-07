@@ -1921,3 +1921,44 @@ nav a.active {
     opacity: 1;
   }
 }
+
+/* =========================
+   MOBILE + DESKTOP FLIP FIX
+========================= */
+
+.score-card {
+  perspective: 1000px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* animation container */
+.score-card-inner {
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* front/back */
+.score-card-front,
+.score-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* back face */
+.score-card-back {
+  transform: rotateY(180deg);
+}
+
+/* desktop hover */
+.score-card:hover .score-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* mobile tap support */
+.score-card:focus-within .score-card-inner {
+  transform: rotateY(180deg);
+}
