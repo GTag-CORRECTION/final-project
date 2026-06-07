@@ -7,13 +7,265 @@
 
     <link rel="stylesheet" href="ext-styling/stylesheets.css" />
   </head>
+  <style>
+    /* =========================
+   CRANE ROOT (IMPORTANT FIX POINT)
+========================= */
+
+    /* tower */
+    .crane::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 12px;
+      height: 220px;
+
+      background: var(--primary-color, #39ff14);
+    }
+
+    /* arm */
+    .crane::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 0;
+
+      width: 180px;
+      height: 12px;
+
+      background: var(--primary-color, #39ff14);
+    }
+
+    /* =========================
+   🎯 FIXED PIVOT POINT (THIS IS THE KEY)
+   Everything attaches here
+========================= */
+
+    .crane-arm-end {
+      position: absolute;
+
+      top: 26px; /* aligns with arm */
+      left: 180px; /* end of crane arm */
+
+      width: 0;
+      height: 0;
+
+      transform-origin: top center;
+    }
+
+    /* =========================
+   🔥 ROPE + HOOK (NOW TRULY ATTACHED)
+========================= */
+
+    .hook {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 2px;
+      height: 140px;
+
+      background: var(--primary-color, #39ff14);
+      box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+
+      transform-origin: top center;
+
+      /* REALISTIC SWING FROM CRANE TIP */
+      animation: craneSwing 4s ease-in-out infinite;
+    }
+
+    @keyframes craneSwing {
+      0% {
+        transform: rotate(12deg);
+      }
+      25% {
+        transform: rotate(-16deg);
+      }
+      50% {
+        transform: rotate(10deg);
+      }
+      75% {
+        transform: rotate(-8deg);
+      }
+      100% {
+        transform: rotate(12deg);
+      }
+    }
+
+    /* hook head */
+    .hook::after {
+      content: "";
+      position: absolute;
+
+      bottom: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 22px;
+      height: 22px;
+
+      background: var(--primary-color, #39ff14);
+      border-radius: 4px;
+
+      box-shadow: 0 0 12px rgba(57, 255, 20, 0.6);
+    }
+
+    /* =========================
+   🔥 ROPE PHYSICS EXTENSION (SMOOTH HANG EFFECT)
+========================= */
+
+    .hook::before {
+      content: "";
+      position: absolute;
+
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 2px;
+      height: 100%;
+
+      background: linear-gradient(
+        to bottom,
+        rgba(57, 255, 20, 0.9),
+        rgba(57, 255, 20, 0.3)
+      );
+
+      filter: blur(0.3px);
+    }
+
+    /* =========================
+   🔥 FLOATING B (NOW FOLLOWS SWING)
+========================= */
+
+    #floatingB {
+      position: absolute;
+
+      bottom: -70px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      font-size: 4rem;
+      font-weight: 900;
+
+      color: var(--primary-color, #39ff14);
+
+      text-shadow:
+        0 0 10px rgba(57, 255, 20, 0.5),
+        0 0 20px rgba(57, 255, 20, 0.3);
+
+      animation: bWobble 2.2s ease-in-out infinite;
+    }
+
+    /* weight lag (makes it feel real) */
+    @keyframes bWobble {
+      0% {
+        transform: translateX(-50%) rotate(-6deg);
+      }
+      50% {
+        transform: translateX(-50%) rotate(6deg);
+      }
+      100% {
+        transform: translateX(-50%) rotate(-6deg);
+      }
+    }
+
+    .crane {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 150px;
+      background-color: #333;
+      border-radius: 5px;
+
+      position: relative; /* IMPORTANT: allows rope to attach properly */
+    }
+
+    /* =========================
+   Button
+========================= */
+
+    .back-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    body {
+      background: #43cea2; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to top,
+        #185a9d,
+        #43cea2
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to top,
+        #185a9d,
+        #43cea2
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+  </style>
+
   <body>
     <main class="construction-page">
-      <h1>🚧 Under Construction 🚧</h1>
+      <div class="construction-scene">
+        <div class="crane active release">
+          <div class="crane-arm-end">
+            <div class="hook">
+              <div id="floatingB">B</div>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="construction-title">
+          <span class="letter">A</span>
+          <span class="letter">D</span>
+          <span class="letter">M</span>
+          <span class="letter">I</span>
+          <span class="letter">N</span>
+          <span class="letter">T</span>
+          <span class="letter">A</span>
+          <span class="letter">L</span>
+          <span class="letter">K</span>
+        </h1>
+      </div>
 
       <p>This page is currently being developed and will be available soon.</p>
 
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+
+      <p class="progress-text">Site Completion: 85%</p>
+
       <a href="index.html" class="back-btn">Return Home</a>
     </main>
+    <script>
+      window.addEventListener("load", () => {
+        const floatingB = document.getElementById("floatingB");
+        const targetB = document.getElementById("targetB");
+
+        const crane = document.querySelector(".crane");
+
+        setTimeout(() => {
+          // get exact positions
+          const targetRect = targetB.getBoundingClientRect();
+          const floatRect = floatingB.getBoundingClientRect();
+
+          // calculate perfect offset
+          const dx = targetRect.left - floatRect.left;
+          const dy = targetRect.top - floatRect.top;
+
+          // move crane to target
+          crane.style.transform = `translate(${dx}px, ${dy}px)`;
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
