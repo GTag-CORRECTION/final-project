@@ -1,1 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badminton Tournaments | Badmintalk</title>
+    <link rel="stylesheet" href="ext-styling/stylesheets.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <h1 class="logo">The World Of Badminton</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="rules.html">Rules</a></li>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="tournaments.html" class="active">Tournaments</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <h2>Badminton Tournaments</h2>
+        <p>Discover the sport's biggest events and champions.</p>
+      </div>
+    </header>
 
+    <main>
+      <section class="intro section">
+        <div class="intro-text">
+          <h2>Major Events</h2>
+          <p class="section-subtitle">
+            From local tournaments to international championships.
+          </p>
+          <p>
+            Badminton tournaments bring together the world's top players in
+            exciting competition. Learn about the top events that define the
+            sport.
+          </p>
+        </div>
+        <div class="intro-image">
+          <img
+            src="https://images.pexels.com/photos/4724327/pexels-photo-4724327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt="Badminton tournament court" />
+        </div>
+      </section>
+
+      <section class="history-facts section">
+        <h2>Top Competitions</h2>
+        <div class="facts-grid">
+          <div class="fact-card">
+            <div class="fact-icon">🏆</div>
+            <h3>Olympic Games</h3>
+            <p>
+              Badminton is an Olympic sport showcasing the highest level of
+              international competition.
+            </p>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon">🌏</div>
+            <h3>World Championships</h3>
+            <p>
+              The BWF World Championships crown the world’s best singles and
+              doubles players.
+            </p>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon">⚡</div>
+            <h3>All England Open</h3>
+            <p>
+              One of the oldest and most prestigious badminton tournaments in
+              the world.
+            </p>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon">🎖️</div>
+            <h3>Thomas & Uber Cup</h3>
+            <p>
+              The biggest team events in badminton, fought between nations every
+              two years.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <h3>The World Of Badminton</h3>
+        <p>Learn. Play. Improve.</p>
+        <p class="footer-small">© 2026 Badmintalk</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑ Top</button>
+
+    <script>
+      const btn = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          btn.classList.add("show");
+        } else {
+          btn.classList.remove("show");
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("shrink");
+        } else {
+          navbar.classList.remove("shrink");
+        }
+      });
+    </script>
+  </body>
+</html>

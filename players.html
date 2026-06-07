@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badminton Players | Badmintalk</title>
+    <link rel="stylesheet" href="ext-styling/stylesheets.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <h1 class="logo">The World Of Badminton</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="rules.html">Rules</a></li>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="players.html" class="active">Players</a></li>
+          <li><a href="tournaments.html">Tournaments</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <h2>Legendary Badminton Players</h2>
+        <p>Explore the athletes who helped shape the sport.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro section">
+        <div class="intro-text">
+          <h2>Top Players to Know</h2>
+          <p class="section-subtitle">
+            From Olympic champions to international stars.
+          </p>
+          <p>
+            Badminton has produced some of the most exciting athletes in racket
+            sports. Their agility, stamina, and tactical skill have made them
+            legends of the game.
+          </p>
+        </div>
+        <div class="intro-image">
+          <img
+            src="https://images.pexels.com/photos/1656674/pexels-photo-1656674.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt="Badminton player preparing to serve" />
+        </div>
+      </section>
+
+      <section class="history-facts section">
+        <h2>Player Highlights</h2>
+        <div class="facts-grid">
+          <div class="fact-card">
+            <div class="fact-icon">🥇</div>
+            <h3>Olympic Greats</h3>
+            <p>
+              Champions such as Lee Chong Wei, Carolina Marín, and Viktor
+              Axelsen have thrilled audiences with fast-paced matches.
+            </p>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon">🌍</div>
+            <h3>Global Talent</h3>
+            <p>
+              Badminton stars come from Asia, Europe, and beyond, showing the
+              sport's international appeal.
+            </p>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon">⚡</div>
+            <h3>Speed & Precision</h3>
+            <p>
+              Elite players combine lightning-fast footwork with precise shot
+              placement.
+            </p>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon">🏆</div>
+            <h3>Major Titles</h3>
+            <p>
+              Many top players have won world championships, All England titles,
+              and Olympic medals.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <h3>The World Of Badminton</h3>
+        <p>Learn. Play. Improve.</p>
+        <p class="footer-small">© 2026 Badmintalk</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑ Top</button>
+
+    <script>
+      const btn = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          btn.classList.add("show");
+        } else {
+          btn.classList.remove("show");
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("shrink");
+        } else {
+          navbar.classList.remove("shrink");
+        }
+      });
+    </script>
+  </body>
+</html>
