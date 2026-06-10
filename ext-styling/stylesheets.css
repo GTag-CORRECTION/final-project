@@ -1964,58 +1964,172 @@ nav a.active {
 }
 
 /* =========================
-   Player Gallery Section
+  PREMIUM PLAYER GALLERY
 ========================= */
 
 .player-gallery {
   text-align: center;
 }
 
+.player-gallery h2 {
+  color: var(--primary-color);
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.gallery-intro {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  color: var(--muted);
+}
+
 .gallery-wrapper {
   overflow: hidden;
-  width: 100%;
   position: relative;
+  width: 100%;
+  padding: 20px 0;
 }
 
-/* Track (moving row) */
 .gallery-track {
   display: flex;
+  gap: 30px;
   width: max-content;
-  gap: 20px;
-  animation: scrollGallery 25s linear infinite;
-  will-change: transform;
+  animation: scrollGallery 35s linear infinite;
 }
 
-/* Player Card */
+.gallery-wrapper:hover .gallery-track {
+  animation-play-state: paused;
+}
+
 .player-card {
-  flex: 0 0 auto;
-  width: 220px;
-  background: #fff;
-  border-radius: 20px;
+  width: 320px;
+
+  flex-shrink: 0;
+
+  background: white;
+  border-radius: 22px;
+
   overflow: hidden;
+
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
-  text-align: center;
+
+  transition: all 0.4s ease;
+
+  text-align: left;
+}
+
+.player-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-hover);
 }
 
 .player-card img {
   width: 100%;
-  height: 280px;
+  height: 360px;
   object-fit: cover;
-  display: block;
 }
 
-.player-card:hover {
-  transform: scale(1.08);
-  z-index: 2;
+.player-info {
+  padding: 22px;
 }
 
-/* Smooth infinite scroll */
+.player-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+}
+
+.country {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: #666;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+}
+
+.player-info p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.player-achievement {
+  display: inline-block;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-dark)
+  );
+
+  color: white;
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+}
+
 @keyframes scrollGallery {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
+
+  to {
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .player-card {
+    width: 280px;
+  }
+
+  .player-card img {
+    height: 300px;
+  }
+}
+
+.featured-content {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 50px;
+  align-items: center;
+}
+
+.featured-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.featured-tag {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 999px;
+  background: var(--primary-color);
+  color: white;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.featured-text ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.featured-text li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .featured-content {
+    grid-template-columns: 1fr;
   }
 }
